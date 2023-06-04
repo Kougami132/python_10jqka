@@ -8,8 +8,6 @@ from time import strftime, localtime
 if __name__ == '__main__':
     db = DataBase()
     data = db.get(21)
-    # for i in data:
-    #     print(i)
 
     # 解决中文乱码问题
     plt.rcParams['font.family'] = ['sans-serif']
