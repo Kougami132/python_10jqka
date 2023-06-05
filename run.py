@@ -34,16 +34,16 @@ class Spider:
                 break
 
             cur += 1
-        print(f'[{time.strftime("%H:%M:%S")}] 数据爬取完毕')
+        print(f'[{time.strftime("%H:%M:%S")}] 数据爬取完毕, 等待一分钟')
 
 def check(timestamp):
     timestamp %= 60 * 60 * 24
     timestamp //= 60
     if timestamp % 5 != 0:
         return False
-    elif timestamp >= 90 & timestamp <= 210:        # 9:30 —— 11:30
+    elif timestamp >= 90 and timestamp <= 210:        # 9:30 —— 11:30
         return True
-    elif timestamp >= 300 & timestamp <= 420:     # 13:00 —— 15:00
+    elif timestamp >= 300 and timestamp <= 420:     # 13:00 —— 15:00
         return True
     else:
         return False
